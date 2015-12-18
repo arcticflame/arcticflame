@@ -35,6 +35,7 @@ $forest['title_append'] = ' | The Arctic Flame';
 
 # Theme related settings.
 $forest['stylesheets'] 	= array(
+    'fonts.css',
     'style.css'
 );
 $forest['favicon']    	= '';
@@ -45,11 +46,10 @@ $forest['javascript_include'] = array();
 
 # Menu
 $menu = array(
-	'home'  => array('text'=>'Home',  'url'=>'', 'class'=>''),
 	'guide'  => array('text'=>'Guide',  'url'=>'', 'class'=>''),
 	'about' => array('text'=>'About', 'url'=>'', 'class'=>''),
 	'login' => array('text'=>'Login', 'url'=>'', 'class'=>'login'),
-    'sign up' => array('text'=>'Sign up', 'url'=>'', 'class'=>'login')
+    'sign up' => array('text'=>'Sign up', 'url'=>'', 'class'=>'login signup')
 );
 
 # Database connection
