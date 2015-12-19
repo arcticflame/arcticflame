@@ -1,0 +1,219 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+body {
+	height: 10000px;
+}
+
+
+/* - - - Wrapper - - - - - */
+
+#wrapper {
+	width: 100%;
+}
+
+
+
+
+
+/* - - - Nav - - - - - - */
+.navbar {
+	text-align: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 65px;
+	line-height: 65px;
+	background: rgba(0, 0, 0, .7);
+	z-index: 10;
+}
+
+.navitem {
+	text-decoration: none;	
+	margin: 20px;
+	padding: 5px;
+	font-family: 'iskoola-pota';
+	text-transform: uppercase;
+	font-size: 22px;
+	color: #FFF;
+	width: 100px;
+}
+
+.navbar img  {
+	position: absolute;
+	width: 50px;
+	top: 10px;
+	left: 153px;
+	z-index: 2;
+}
+
+.navbar::after {
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	bottom: -28px;
+	left: 138px;
+	border-right: 39px solid transparent;
+	border-left: 39px solid transparent;
+	border-top: 28px solid rgba(0, 0, 0, .7);
+}
+
+.login  {
+	position: absolute;
+	line-height: normal;
+	right: 130px;
+	top: -5px;
+	height: 31px;
+	
+}
+
+.signup {
+	right: 20px;
+}
+
+
+
+/* - - - - Header - - - - - */
+
+#head {
+	position: relative;
+	background: url("../img/snow.jpg") center top no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+
+#logo {
+	position: absolute;
+	background: url("../img/logo-name.svg") center center no-repeat;
+	background-size: cover;
+	width: 1024px;
+	height: 270px;
+	left: 50%;
+	top: 50%;
+	margin-top: -135px;
+	margin-left: -512px;
+}
+
+
+
+
+
+
+
+/* - - - - Main - - - - - - */
+
+.main {
+	width: 1024px;
+}
+
+
+
+/* - - - - Loginform - - - - */
+
+#overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, .6);
+	z-index: 9;
+}
+
+#loginarea {
+	position: fixed;
+	z-index: 99;
+	width: 400px;
+	height: 500px;
+	left: 50%;
+	margin-left: -200px;
+	top: 50%;
+	margin-top: -250px;
+	background: rgba(255, 255, 255, 1);
+	padding: 10px;
+	border-radius: 3px;
+}
+
+#loginform {
+	border: 1px solid red;
+}
+
+#loginform input {
+	display: block;
+	margin: auto;
+}
+
+#loginform input[type=checkbox] {
+	display: inline-block;
+}
+
+.tags {
+	position: relative;
+	width: 240px;
+	margin: 20px auto;
+}
+
+#username, #password {
+	margin: 20px auto;
+	padding: 10px;
+	width: 100%;
+	border: none;
+	outline: 0;
+	background: #272727;
+	color: #FFF;
+	text-align: center;
+}
+
+.tags::before, .tags::before {
+	content: "";
+	width: 0;
+	height: 0;
+	padding: 0;
+	margin: 0;
+	border-top: 18px solid transparent;
+	border-bottom: 17px solid transparent;
+	border-right: 18px solid #272727;
+	position: absolute;
+	top: 0;
+	left: -18px;
+}
+
+.tags::after, .tags::after {
+	content: "";
+	width: 0;
+	height: 0;
+	padding: 0;
+	margin: 0;
+	border-top: 18px solid transparent;
+	border-bottom: 17px solid transparent;
+	border-left: 18px solid #272727;
+	position: absolute;
+	top: 0;
+	right: -18px;
+}
+
+.arrow {
+	width: 40px;
+	height: 40px;
+	margin: 0 auto 20px auto;
+	background: url('../img/taf.png') center center no-repeat;
+	background-size: cover;
+}
+
+#login_btn {
+	width: 120px;
+	padding: 8px;
+	background: #272727;
+	border: none;
+	color: #FFF;
+	border-radius: 2px;
+}
+
+
+/* - - - - Footer - - - - - */
