@@ -13,7 +13,7 @@ ini_set('output_buffering', 0);   	# Do not buffer outputs, write directly
 # Define Forest paths.
 define('FOREST_INSTALL_PATH', __DIR__ . '/..');
 define('FOREST_THEME_PATH', FOREST_INSTALL_PATH . '/theme/render.php');
-define('FOREST_CRYPT_PATH', FOREST_INSTALL_PATH . '/src/crypt.php')
+define('FOREST_CRYPT_PATH', FOREST_INSTALL_PATH . '/src/crypt.php');
  
 
 # Include bootstrapping functions.
@@ -36,21 +36,24 @@ $forest['title_append'] = ' | The Arctic Flame';
 
 # Theme related settings.
 $forest['stylesheets'] 	= array(
-    'fonts.css',
-    'style.css'
+    'css/fonts.css',
+    'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
+    'css/style.css'
 );
+
 $forest['favicon']    	= '';
 
 
 # Settings for JavaScript.
-$forest['javascript_include'] = array();
+$forest['javascript_include'] = array(
+    'js/jquery-1.11.3.min.js',
+    'js/login.js'
+);
 
 # Menu
 $menu = array(
 	'guide'  => array('text'=>'Guide',  'url'=>'', 'class'=>''),
-	'about' => array('text'=>'About', 'url'=>'', 'class'=>''),
-	'login' => array('text'=>'Login', 'url'=>'', 'class'=>'login'),
-    'sign up' => array('text'=>'Sign up', 'url'=>'', 'class'=>'login signup')
+	'about' => array('text'=>'About', 'url'=>'', 'class'=>'')
 );
 
 # Database connection

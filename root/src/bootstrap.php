@@ -6,8 +6,7 @@ function myExceptionHandler($e) {
 }
 
 set_exception_handler('myExceptionHandler');
- 
- 
+
 
 # Autoloader for classes.
 function Autoloader($class) {

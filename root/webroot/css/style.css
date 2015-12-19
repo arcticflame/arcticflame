@@ -3,10 +3,21 @@
 	padding: 0;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 body {
 	height: 10000px;
+}
+
+a {
+	cursor: pointer;
 }
 
 
@@ -101,11 +112,6 @@ body {
 }
 
 
-
-
-
-
-
 /* - - - - Main - - - - - - */
 
 .main {
@@ -124,6 +130,7 @@ body {
 	height: 100vh;
 	background: rgba(0, 0, 0, .6);
 	z-index: 9;
+	display: none;
 }
 
 #loginarea {
@@ -138,19 +145,47 @@ body {
 	background: rgba(255, 255, 255, 1);
 	padding: 10px;
 	border-radius: 3px;
+	
+}
+
+.close {
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	background: rgba(0, 0, 0, 0) url('../img/close.png') center center no-repeat;
+	background-size: cover;
+	border: none;
+	outline: 0;
+	cursor: pointer;
+}
+
+#loginarea header {
+	text-align: center;
+	height: 70px;
+	line-height: 70px;
+}
+
+#loginarea h1 {
+	font-size: 40px;
+	color: #272727;
+	display: inline-block;
+}
+
+#loginarea header i {
+	margin-left: 10px;
+	color: #272727;
 }
 
 #loginform {
-	border: 1px solid red;
+	padding-bottom: 20px;
+	margin-top: 40px;
 }
 
 #loginform input {
 	display: block;
 	margin: auto;
-}
-
-#loginform input[type=checkbox] {
-	display: inline-block;
 }
 
 .tags {
@@ -168,6 +203,10 @@ body {
 	background: #272727;
 	color: #FFF;
 	text-align: center;
+}
+
+#username:hover, #password:hover {
+	cursor: text;
 }
 
 .tags::before, .tags::before {
@@ -213,7 +252,87 @@ body {
 	border: none;
 	color: #FFF;
 	border-radius: 2px;
+	outline: 0;
 }
 
+#login_btn:hover {
+	cursor: pointer;
+}
+
+#remember {
+	display: none !important;
+}
+
+#remember_label {
+	text-align: center;
+	display: block;
+	margin: 0 auto 30px auto;
+	width: 140px;
+}
+
+#remember_label:hover {
+	cursor: pointer;
+}
+
+#checkbox {
+	width: 15px;
+	height: 15px;
+	background: #272727;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	position: relative;
+
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+#checkbox::after {
+	content: "";
+	width: 7px;
+	height: 7px;
+	background: #9CDDFF;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -3px;
+	margin-left: -3px;
+	visibility: hidden;
+}
+
+#remember:checked + #checkbox:after {
+	visibility: visible;
+}
+
+#loginmsg {
+	width: 275px;
+	margin: auto;
+	max-height: 70px;
+	text-align: center;
+	color: #ABAB00;
+}
+
+#forgotten {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	text-align: right;
+	color: #272727;
+	padding-right: 10px;
+}
+
+#forgotten a {
+	color: #353535;
+	text-decoration: none;
+}
+
+#forgotten a:hover {
+	color: #272727;
+	text-decoration: underline;
+}
 
 /* - - - - Footer - - - - - */
