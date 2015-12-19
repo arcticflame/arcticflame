@@ -10,9 +10,10 @@ ini_set('display_errors', 1);     	# Display all errors
 ini_set('output_buffering', 0);   	# Do not buffer outputs, write directly
  
 
-# Define Anax paths.
+# Define Forest paths.
 define('FOREST_INSTALL_PATH', __DIR__ . '/..');
 define('FOREST_THEME_PATH', FOREST_INSTALL_PATH . '/theme/render.php');
+define('FOREST_CRYPT_PATH', FOREST_INSTALL_PATH . '/src/crypt.php')
  
 
 # Include bootstrapping functions.
@@ -53,7 +54,7 @@ $menu = array(
 );
 
 # Database connection
-$anax['connect'] = array(
+$forest['connect'] = array(
 	'dsn' => 'mysql:host=localhost;dbname=Movie;',
     'username' => 'root',
     'password' => '',
