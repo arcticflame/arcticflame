@@ -13,6 +13,9 @@
 }
 
 body {
+	overflow-x: hidden;
+	overflow-y: auto;
+
 	height: 10000px;
 }
 
@@ -145,7 +148,7 @@ a {
 	background: rgba(255, 255, 255, 1);
 	padding: 10px;
 	border-radius: 3px;
-	
+	display: none;
 }
 
 .close {
@@ -309,7 +312,15 @@ a {
 	margin: auto;
 	max-height: 70px;
 	text-align: center;
-	color: #ABAB00;
+}
+
+#loginmsg span, #loginmsg img, #loginmsg .fa {
+	vertical-align: middle;
+	margin: 0 5px;
+}
+
+#loginmsg img {
+	width: 20px;
 }
 
 #forgotten {

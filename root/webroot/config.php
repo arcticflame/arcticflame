@@ -58,7 +58,7 @@ $menu = array(
 
 # Database connection
 $forest['connect'] = array(
-	'dsn' => 'mysql:host=localhost;dbname=Movie;',
+	'dsn' => 'mysql:host=localhost;dbname=test;',
     'username' => 'root',
     'password' => '',
     'driver_options' => array(

@@ -1,11 +1,11 @@
 <?php
 class Connection {
-    private $db                 = 	null;     # The PDO object
-    private $options;           = 	null;     # Options used when creating the PDO object
-    private $stmt               = 	null;     # The latest statement used to execute a query
-    private static $numQueries  = 	0;        # Count all queries made
-    private static $queries     = 	array();  # Save all queries for debugging purpose
-    private static $params      = 	array();  # Save all parameters for debugging purpose
+    private $db                 = 	null;    # The PDO object
+    private $options;                        # Options used when creating the PDO object
+    private $stmt               = 	null;    # The latest statement used to execute a query
+    private static $numQueries  = 	0;       # Count all queries made
+    private static $queries     = 	array(); # Save all queries for debugging purpose
+    private static $params      = 	array(); # Save all parameters for debugging purpose
 
     public function __construct($options) {
         $default = array(
@@ -33,11 +33,11 @@ class Connection {
     }
 
     public function prepare($sql) {
-    	return $this->db->prepare($sql);
+    	$this->stmt = $this->db->prepare($sql);
     }
 
     public function execute($params = array()) {
-    	$exec = $this->db->execute($params);
+    	$exec = $this->stmt->execute($params);
 
     	if($exec)
     		return true;
@@ -45,21 +45,16 @@ class Connection {
     		return false;
     }
 
-    public function prepareExecute($sql, $params) {
-    	$q = $this->db->prepare($sql);
-    	$exec = $this->db->execute($params);
-
-    	if($exec)
-    		return true;
-    	else
-    		return false;
+    public function prepareExecute($sql, $params = array()) {
+    	$this->prepare($sql);
+        return $this->execute($params);
     }
 
     public function fetch() {
-    	return $this->db->fetch();
+    	return $this->stmt->fetch();
     }
 
     public function fetchAll() {
-    	return $this->db->fetchAll();
+    	return $this->stmt->fetchAll();
     }
 }
