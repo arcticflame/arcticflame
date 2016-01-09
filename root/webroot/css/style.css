@@ -95,6 +95,11 @@ a {
 
 /* - - - - Header - - - - - */
 
+#header {
+	min-height: 200px;
+	border: 1px solid red;
+}
+
 #head {
 	position: relative;
 	background: url("../img/snow.jpg") center top no-repeat;
@@ -148,7 +153,7 @@ a {
 	background: rgba(255, 255, 255, 1);
 	padding: 10px;
 	border-radius: 3px;
-	//display: none;
+	display: none;
 }
 
 .close {
@@ -304,12 +309,12 @@ a {
 	visibility: hidden;
 }
 
-#checkbox > span
-{
+#checkbox > span {
 	vertical-align: middle;
 }
 
 /* Chrome auto-fill color fix */
+
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px #272727 inset;
 	-webkit-text-fill-color: white;
@@ -357,6 +362,70 @@ input:-webkit-autofill {
 #forgotten a:hover {
 	color: #272727;
 	text-decoration: underline;
+}
+
+/* - - - - Register page - - */
+
+#topbanner {
+	background: url('../img/topbanner.svg') top left no-repeat;
+	background-size: contain;
+	width: 1024px;
+	height: 150px;
+	margin: 0 auto;
+}
+
+#registerform {
+	border: 1px solid purple;
+	max-width: 960px;
+	margin: 10px auto;
+	padding: 10px;
+	text-align: center;
+}
+
+#registerform h3, #textcontainer {
+	width: 360px;
+	margin: 0 auto 5px auto;
+	text-align: left;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #3D3D3D;
+}
+
+#registerform input {
+	width: 360px;
+	padding: 10px;
+	margin-bottom: 20px;
+	background: #272727;
+	border: none;
+	text-align: center;
+	outline: 0;
+	color: #FFF;
+}
+
+#registerform .name > input {
+	width: 100%;
+}
+
+.regtag {
+	width: 360px;
+	margin: 0 auto;
+}
+
+.name {
+	width: 163px !important;
+	display: inline-block;
+	margin: 0 15px;
+}
+
+.nameh3 {
+	display: inline-block;
+	width: 163px !important;
+	text-align: left;
+	margin: 0 !important;
+}
+
+.nameh3:nth-of-type(2) {
+	margin-left: 30px !important;
 }
 
 /* - - - - Footer - - - - - */

@@ -2,12 +2,11 @@
 # Include config
 include(__DIR__ . '/config.php');
 
-$forest['title'] = "Hello World";
+$forest['title'] = "Home";
  
 $forest['header'] = <<<EOD
 <div id="head">
 	<div id="logo"></div>
-
 </div>
 EOD;
  

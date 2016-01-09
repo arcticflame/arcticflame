@@ -12,7 +12,7 @@ class Navigation {
         }
 
         $html .= "<a class='navitem login' onclick='showLoginArea()'>Login</a>
-                    <a class='navitem login signup'>SIGN UP</a>";
+                    <a href='register.php' class='navitem login signup'>REGISTER</a>";
 
     	$html .= "</nav>\n";
     	return $html;
